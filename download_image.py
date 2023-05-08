@@ -44,7 +44,7 @@ try:
     ## Wait for finger to be read as an image
     while sensor.readImage() == False :
         print('No finger detected. Waiting...')
-        time.sleep(1)
+        time.sleep(5)
         print('Finger detected. Downloading image...')
 
     print('Downloading image (this may take a while)...')
