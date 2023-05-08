@@ -40,11 +40,12 @@ print('Currently stored fingers: {}/{}'.format(sensor.getTemplateCount(), sensor
 ## Tries to search the finger and calculate hash
 try:
     print('Waiting for finger...')
-
+ 
     ## Wait for finger to be read as an image
     while sensor.readImage() == False :
+        pass
         print('No finger detected. Waiting...')
-        time.sleep(5)
+        time.sleep(10)
         print('Finger detected. Downloading image...')
 
     print('Downloading image (this may take a while)...')
