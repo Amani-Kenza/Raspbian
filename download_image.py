@@ -56,5 +56,5 @@ try:
 
 except Exception as e:
     print('Operation failed!')
-    print('Exception message: '.format(e))
+    print('Exception message: {}'.format(str(e)))
     exit(1)
