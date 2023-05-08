@@ -4,7 +4,7 @@
 """
     This script allow for capturing and saving on computer the raw image of a fingerprint.
 """
-
+import time
 import sys, os
 from pyfingerprint.pyfingerprint import PyFingerprint
 
