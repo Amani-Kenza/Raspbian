@@ -37,24 +37,25 @@ except Exception as e:
 ## Gets info about how many fingerprint are currently stored
 print('Currently stored fingers: {}/{}'.format(sensor.getTemplateCount(), sensor.getStorageCapacity()))
 
+while True :
 ## Tries to search the finger and calculate hash
-try:
-    print('Waiting for finger...')
+    try:
+        print('Waiting for finger...')
     
     ## Wait for finger to be read as an image
-    while sensor.readImage() == False :
-          print('No finger detected. Waiting...')
-          time.sleep(1)
-    print('Finger detected. Downloading image...')
+        while sensor.readImage() == False :
+              print('No finger detected. Waiting...')
+              time.sleep(1)
+        print('Finger detected. Downloading image...')
 
-    print('Downloading image (this may take a while)...')
+        print('Downloading image (this may take a while)...')
+      
+        sensor.downloadImage(OUTPUT_IMG_PATH)
 
-    sensor.downloadImage(OUTPUT_IMG_PATH)
+        print('The image have been saved to "{}".'.format(OUTPUT_IMG_PATH))
+       
 
-    print('The image have been saved to "{}".'.format(OUTPUT_IMG_PATH))
-
-
-except Exception as e:
-    print('Operation failed!')
-    print('Exception message: {}'.format(str(e)))
-    exit(1)
+    except Exception as e:
+         print('Operation failed!')
+         print('Exception message: {}'.format(str(e)))
+         exit(1)
