@@ -11,7 +11,7 @@ from pyfingerprint.pyfingerprint import PyFingerprint
 
 def help () :
     print("""
-        Usage : {} ./output_file.bmp
+        Usage : {} ./my_images
     """.format(os.path.realpath(__file__)))
 
     exit(0)
@@ -19,7 +19,7 @@ def help () :
 
 if len(sys.argv) < 2 :
     help()
-OUTPUT_IMG_PATH = "/home/pi/my_images/output_file.bmp"
+OUTPUT_IMG_PATH = "/home/pi/my_images"
 #OUTPUT_IMG_PATH = sys.argv[1]
 
 ## Tries to initialize the sensor
