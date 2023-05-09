@@ -20,7 +20,7 @@ def help () :
 if len(sys.argv) < 2 :
     help()
 OUTPUT_IMG_PATH = "/home/pi/my_images/output_file.bmp"
-OUTPUT_IMG_PATH = sys.argv[1]
+#OUTPUT_IMG_PATH = sys.argv[1]
 
 ## Tries to initialize the sensor
 try:
