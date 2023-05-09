@@ -19,7 +19,7 @@ def help () :
 
 if len(sys.argv) < 2 :
     help()
-OUTPUT_IMG_PATH = "/home/pi/my_images/output_file.bmp"
+#OUTPUT_IMG_PATH = "/home/pi/my_images/output_file.bmp"
 OUTPUT_IMG_PATH = sys.argv[1]
 
 ## Tries to initialize the sensor
@@ -44,7 +44,7 @@ try:
     ## Wait for finger to be read as an image
     while sensor.readImage() == False :
           print('No finger detected. Waiting...')
-          time.sleep(10)
+          time.sleep(1)
     print('Finger detected. Downloading image...')
 
     print('Downloading image (this may take a while)...')
