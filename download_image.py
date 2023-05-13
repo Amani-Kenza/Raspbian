@@ -44,8 +44,15 @@ while True :
     
     ## Wait for finger to be read as an image
         while sensor.readImage() == False :
-              print('No finger detected. Waiting...')
-              time.sleep(10)
+            # Set the LED color to green when recognition is in progress
+            sensor.setLED(0x00FF00, 1)
+
+    # Do fingerprint recognition here
+
+    # Set the LED color back to red when waiting for a finger again
+            sensor.setLED(0xFF0000, 1)
+            print('No finger detected. Waiting...')
+            time.sleep(10)
         print('Finger detected. Downloading image...')
 
         print('Downloading image (this may take a while)...')
